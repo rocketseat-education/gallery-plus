@@ -12,33 +12,33 @@ export default function PageHome() {
             title: "Olá mundo!",
             imageId: "portrait-tower.png",
             albums: [
-              { id: "321", title: "Album 1" },
-              { id: "321", title: "Album 2" },
-              { id: "321", title: "Album 3" },
+              { id: "3421", title: "Album 1" },
+              { id: "123", title: "Album 2" },
+              { id: "456", title: "Album 3" },
             ],
           }}
         />
         <PhotoWidget
           photo={{
-            id: "123",
+            id: "456",
             title: "Olá mundo!",
             imageId: "portrait-tower.png",
             albums: [
-              { id: "321", title: "Album 1" },
-              { id: "321", title: "Album 2" },
-              { id: "321", title: "Album 3" },
+              { id: "3421", title: "Album 1" },
+              { id: "123", title: "Album 2" },
+              { id: "456", title: "Album 3" },
             ],
           }}
         />
         <PhotoWidget
           photo={{
-            id: "123",
+            id: "abc",
             title: "Olá mundo!",
             imageId: "portrait-tower.png",
             albums: [
-              { id: "321", title: "Album 1" },
-              { id: "321", title: "Album 2" },
-              { id: "321", title: "Album 3" },
+              { id: "3421", title: "Album 1" },
+              { id: "123", title: "Album 2" },
+              { id: "456", title: "Album 3" },
             ],
           }}
         />
