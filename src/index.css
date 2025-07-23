@@ -1,23 +1,24 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
 @theme {
-	--color-*: initial;
-	--color-white: #ffffff;
-	--color-black: #000000;
-	--color-background-primary: #040d18;
-	--color-background-secondary: #262337;
-	--color-background-tertiary: #3c3857;
-	--color-border-primary: #2c2c35;
-	--color-border-active: #4c4c5d;
-	--color-accent-brand: #1ccfc3;
-	--color-accent-brand-light: #66eae1;
-	--color-accent-red: #f54a26;
-	--color-heading: #fafcff;
-	--color-accent-paragraph: #f1f7ff;
-	--color-accent-span: #5c636c;
-	--color-placeholder: #a9a9a9;
-	--color-label: #ffffff;
-	--color-label-inverse: #040d18;
+  --color-*: initial;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-background-primary: #040d18;
+  --color-background-secondary: #262337;
+  --color-background-tertiary: #3c3857;
+  --color-border-primary: #2c2c35;
+  --color-border-active: #4c4c5d;
+  --color-accent-brand: #1ccfc3;
+  --color-accent-brand-light: #66eae1;
+  --color-accent-red: #f54a26;
+  --color-heading: #fafcff;
+  --color-accent-paragraph: #f1f7ff;
+  --color-accent-span: #5c636c;
+  --color-placeholder: #a9a9a9;
+  --color-label: #ffffff;
+  --color-label-inverse: #040d18;
 
-	--font-sans: "Mulish", sans-serif;
+  --font-sans: "Mulish", sans-serif;
 }
