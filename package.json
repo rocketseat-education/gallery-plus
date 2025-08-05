@@ -19,6 +19,7 @@
     "@hookform/resolvers": "^5.1.1",
     "@radix-ui/react-dialog": "^1.1.14",
     "@tailwindcss/vite": "^4.1.10",
+    "axios": "^1.11.0",
     "classnames": "^2.5.1",
     "fastify": "^4.24.3",
     "react": "^19.1.0",
