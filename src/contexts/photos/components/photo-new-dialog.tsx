@@ -19,6 +19,7 @@ import { useForm } from "react-hook-form";
 import useAlbums from "../../albums/hooks/use-albums";
 import { photoNewFormSchema, type PhotoNewFormSchema } from "../../schemas";
 import { zodResolver } from "@hookform/resolvers/zod";
+import usePhoto from "../hooks/use-photo";
 
 interface PhotoNewDialogProps {
   trigger: React.ReactNode;
@@ -31,6 +32,8 @@ export default function PhotoNewDialog({ trigger }: PhotoNewDialogProps) {
   });
 
   const { albums, isLoadingAlbums } = useAlbums();
+  const { createPhoto } = usePhoto();
+  const [isCreatingPhoto, setIsCreatingPhoto] = React.useTransition();
 
   const file = form.watch("file");
   const fileSrc = file?.[0] ? URL.createObjectURL(file[0]) : undefined;
@@ -44,7 +47,10 @@ export default function PhotoNewDialog({ trigger }: PhotoNewDialogProps) {
   }, [modalOpen, form]);
 
   function handleSubmit(payload: PhotoNewFormSchema) {
-    console.log(payload);
+    setIsCreatingPhoto(async () => {
+      await createPhoto(payload);
+      setModalOpen(false);
+    });
   }
 
   function handleToggleAlbum(albumId: string) {
@@ -123,9 +129,17 @@ export default function PhotoNewDialog({ trigger }: PhotoNewDialogProps) {
 
           <DialogFooter>
             <DialogClose asChild>
-              <Button variant="secondary">Cancelar</Button>
+              <Button variant="secondary" disabled={isCreatingPhoto}>
+                Cancelar
+              </Button>
             </DialogClose>
-            <Button type="submit">Adicionar</Button>
+            <Button
+              type="submit"
+              disabled={isCreatingPhoto}
+              handling={isCreatingPhoto}
+            >
+              {isCreatingPhoto ? "Adicionando" : "Adicionar"}
+            </Button>
           </DialogFooter>
         </form>
       </DialogContent>
